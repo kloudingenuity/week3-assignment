@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { Drawer, Divider, Tooltip, IconButton } from '@material-ui/core';
+import { Drawer, Divider, IconButton } from '@material-ui/core';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ShoppingCart from '../shopping-cart';
@@ -48,12 +48,10 @@ export default function DrawerRight(props) {
             classes={{
               paper: classes.drawerPaper,
             }}>
-            <div className={classes.drawerHeader}>
-            <Tooltip title="Hide Cart">
+            <div className={classes.drawerHeader} >
                 <IconButton onClick={props.handleDrawerClose}>
                 {theme.direction === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
                 </IconButton>
-            </Tooltip>
             </div>
             <Divider />
             <ShoppingCart cartItems={props.cartItems} 

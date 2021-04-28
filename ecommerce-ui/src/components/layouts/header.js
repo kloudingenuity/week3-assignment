@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
-import { AppBar, Toolbar, Typography, IconButton, Tooltip } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, IconButton } from '@material-ui/core';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import AddBoxIcon from '@material-ui/icons/AddBox';
 
@@ -58,15 +58,12 @@ export default function Header(props) {
           <Typography variant="h6" noWrap className={classes.title}>
             Vacation Rentals
           </Typography>
-          <Tooltip title="Add new rental property">
             <IconButton
               onClick={props.handleDialogOpen}
               color="inherit"
               aria-label="add new rental property">
               <AddBoxIcon/>
             </IconButton>
-          </Tooltip>
-          <Tooltip title="Open Cart">
             <IconButton
               color="inherit"
               aria-label="open shopping cart"
@@ -75,7 +72,6 @@ export default function Header(props) {
               className={clsx(props.open && classes.hide)}>
               <ShoppingCartIcon/>
             </IconButton>
-          </Tooltip>
         </Toolbar>
       </AppBar>      
     </div>

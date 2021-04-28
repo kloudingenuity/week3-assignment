@@ -1,12 +1,6 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import PropTypes from 'prop-types';
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
+import { Button, DialogTitle, DialogContentText, DialogContent, DialogActions, Dialog, TextField } from '@material-ui/core';
 
 AddRental.propTypes = {
   open: PropTypes.bool.isRequired,
@@ -69,7 +63,7 @@ export default function AddRental(props) {
   };
 
   return (
-    <div>
+    <Fragment>
       <Dialog open={props.open} onClose={props.handleDialogClose} aria-labelledby="form-dialog-title">
         <DialogTitle id="form-dialog-title">BECOME A HOST</DialogTitle>
         <DialogContent>
@@ -129,6 +123,6 @@ export default function AddRental(props) {
           </Button>
         </DialogActions>
       </Dialog>
-    </div>
+    </Fragment>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import { makeStyles } from '@material-ui/core/styles';
-import { Card, CardHeader, CardMedia, CardContent, Grid, Divider, IconButton, Tooltip, Chip } from '@material-ui/core';
+import { Card, CardHeader, CardMedia, CardContent, Grid, Divider, IconButton, Chip } from '@material-ui/core';
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import Rating from '@material-ui/lab/Rating';
 import LoyaltyIcon from '@material-ui/icons/Loyalty';
@@ -74,9 +74,9 @@ const useStyles = makeStyles((theme) => ({
               : "";
           
     const isSuperHost = props.card.host.isSuperhost ? 
-              <Tooltip title="Super Host">
+             // <Tooltip title="Super Host">
                 <LoyaltyIcon />
-              </Tooltip>
+             // </Tooltip>
               : "";
 
     return (
@@ -88,14 +88,14 @@ const useStyles = makeStyles((theme) => ({
             <div className={classes.details}>
                 <CardHeader className={classes.heading}
                     avatar=""
-                    action={<Tooltip title="Add to cart">
+                    action={
                       <IconButton
                         color="inherit"
                         aria-label="add to cart"                      
                         onClick={() => props.handleAddToCartClick(props.card)}>
                         <AddShoppingCartIcon/>
                       </IconButton>
-                    </Tooltip>}
+                  }
                     title={props.card.title}
                     subheader={location} />
                 <CardContent className={classes.content}>

@@ -89,7 +89,7 @@ function App() {
       <DrawerRight drawerWidth={drawerWidth} cartItems={cartItems}      
         handleRemoveFromCart={handleRemoveFromCart}
         open={open} handleDrawerClose={handleDrawerClose} />
-      <AddRental open={openDialog} handleDialogClose={handleDialogClose} handleAddProperty={handleAddNewProperty} />
+        <AddRental open={openDialog} handleDialogClose={handleDialogClose} handleAddProperty={handleAddNewProperty} />
     </div>
   );
 }
