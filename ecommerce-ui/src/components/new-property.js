@@ -45,7 +45,7 @@ export default function AddRental(props) {
           "country": country
       },
       "payment": {
-          "cost": cost,
+          "cost": Number(cost),
           "description": ""
       },
       "host": {
@@ -95,6 +95,7 @@ export default function AddRental(props) {
           <TextField required margin="dense"
             id="cost"
             label="Cost"
+            type="number"
             variant="filled"
             fullWidth
             onChange={handleChange}
